@@ -8,7 +8,7 @@ module.exports = {
         });
         return config;
     },
-    images: { loader: 'cloudinary', domains: ['localhost'] },
+    images: { domains: ['localhost'] },
     // Use the CDN in production and localhost for development.
     assetPrefix: isProd
         ? 'https://cdn.statically.io/gh/damiponce/damiponce.github.io/gh-pages/'
