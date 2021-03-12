@@ -10,7 +10,7 @@ module.exports = {
     },
     images: { loader: 'cloudinary', domains: ['localhost'] },
     // Use the CDN in production and localhost for development.
-    assetPrefix: isProd
-        ? 'https://cdn.statically.io/gh/NaveenDA/naveenda.github.io/gh-pages/'
-        : '',
+    // assetPrefix: isProd
+    //     ? 'https://cdn.statically.io/gh/NaveenDA/naveenda.github.io/gh-pages/'
+    //     : '',
 };
