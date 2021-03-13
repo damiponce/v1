@@ -15,7 +15,7 @@ export default function Home() {
         <div className='container'>
             <Head>
                 <title>Damián's Portfolio</title>
-                <link rel='icon' href='/favicon.ico' />
+                <link rel='shortcut icon' href='/favicon.ico' />
             </Head>
 
             <main className={styles.main} id='main_home'>

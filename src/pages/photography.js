@@ -11,6 +11,7 @@ import {
 import { getAllPictures } from '../lib/pictures';
 // import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import Masonry from 'react-masonry-css';
+import { customLoader } from '../components/utils';
 
 import styles from '../styles/photography.module.css';
 
@@ -77,15 +78,15 @@ export default function Photography({ allPicturesData }) {
             >
                 {allPicturesData.map((pic) => (
                     <div key={pic.index} className={styles.card}>
-                        <img
+                        <Image
                             className={styles.image + ' no-touch'}
+                            loader={customLoader}
                             src={pic.fullPath}
                             alt={pic.id}
                             width={650}
                             height={650 / pic.ratio}
-                            sizes={'50%'}
                             quality={100}
-                        ></img>
+                        ></Image>
                     </div>
                 ))}
             </Masonry>
