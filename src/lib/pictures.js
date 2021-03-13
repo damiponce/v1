@@ -4,10 +4,10 @@ const sizeOf = require('image-size');
 
 const picsDirectory = path.join(process.cwd(), 'public/images/photos');
 
-export function getAllPictures() {
+export function getAllPhotos() {
     // Get file names under /posts
     const fileNames = fs.readdirSync(picsDirectory);
-    const allPostsData = fileNames.map((fileName, index) => {
+    const allPhotosData = fileNames.map((fileName, index) => {
         // Remove extension from file name to get id
         const id = fileName.replace(/\.(png|jpe?g|svg)$/i, '');
         // Read markdown file as string
@@ -31,5 +31,5 @@ export function getAllPictures() {
         };
     });
 
-    return allPostsData;
+    return allPhotosData;
 }
