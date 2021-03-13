@@ -45,7 +45,7 @@ export default function Layout({ children }) {
                 </div>
                 <div className={styles.spacer} />
                 <div className={styles.burger} id='js-burger'>
-                    H
+                    <img src='/burger-menu.svg' width='30' height='20' />
                 </div>
                 <div className={styles.links} id='js-menu'>
                     <Link href='/coding'>

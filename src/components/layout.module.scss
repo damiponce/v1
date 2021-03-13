@@ -59,7 +59,6 @@ $border: #777;
 
 .burger {
     display: none;
-    text-align: right;
 }
 
 .links {
@@ -87,9 +86,7 @@ $border: #777;
     }
     .burger {
         display: inline-block;
-        cursor: pointer;
-        color: black;
-        font-size: 24px;
+        margin-top: 3.81px;
     }
 }
 
