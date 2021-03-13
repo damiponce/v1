@@ -11,6 +11,8 @@ module.exports = {
         };
         return config;
     },
+    // Set placeholder loader for exporting to static HTML
+    images: { loader: 'cloudinary', domains: ['localhost'] },
     // Use the CDN in production and localhost for development.
     assetPrefix: isProd
         ? 'https://cdn.statically.io/gh/damiponce/damiponce.github.io/gh-pages/'
