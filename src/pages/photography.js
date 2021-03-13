@@ -77,7 +77,7 @@ export default function Photography({ allPicturesData }) {
             >
                 {allPicturesData.map((pic) => (
                     <div key={pic.index} className={styles.card}>
-                        <Image
+                        <img
                             className={styles.image + ' no-touch'}
                             src={pic.fullPath}
                             alt={pic.id}
@@ -85,7 +85,7 @@ export default function Photography({ allPicturesData }) {
                             height={650 / pic.ratio}
                             sizes={'50%'}
                             quality={100}
-                        ></Image>
+                        ></img>
                     </div>
                 ))}
             </Masonry>
