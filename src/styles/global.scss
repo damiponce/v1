@@ -201,6 +201,7 @@ a[meta*='aul'] {
     padding-bottom: 0.2em;
     z-index: 1;
     width: fit-content;
+    pointer-events: initial;
 
     &:before,
     &:after {

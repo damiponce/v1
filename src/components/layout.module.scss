@@ -64,7 +64,7 @@ $border: #777;
 
 .links {
     display: flex;
-    cursor: none;
+    pointer-events: none;
 }
 
 @media (max-width: 650px) {
@@ -110,6 +110,7 @@ $border: #777;
     flex-grow: 1;
     height: $h0;
     cursor: none;
+    pointer-events: none;
 }
 
 .active {

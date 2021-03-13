@@ -78,7 +78,7 @@ export default function Photography({ allPicturesData }) {
                 {allPicturesData.map((pic) => (
                     <div key={pic.index} className={styles.card}>
                         <Image
-                            className={styles.image}
+                            className={styles.image + ' no-touch'}
                             src={pic.fullPath}
                             alt={pic.id}
                             width={650}

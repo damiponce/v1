@@ -40,7 +40,7 @@ export default function Layout({ children }) {
             <header className={styles.header} id='js-header'>
                 <div className={styles.logo}>
                     <Link href='/'>
-                        <Image src='/dp-logo.svg' width='30' height='20' />
+                        <img src='/dp-logo.svg' width='30' height='20' />
                     </Link>
                 </div>
                 <div className={styles.spacer} />
