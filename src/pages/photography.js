@@ -6,6 +6,7 @@ import Masonry from 'react-masonry-css';
 import { customLoader, getAllPhotos } from '../components/utils';
 
 import styles from '../styles/photography.module.css';
+import * as d_styles from '../styles/design.module.css';
 
 export async function getStaticProps() {
     var allPicturesData = getAllPhotos();
@@ -41,9 +42,26 @@ export default function Photography({ allPicturesData }) {
                 <title>Photography - Damián Ponce</title>
             </Head>
 
-            <div className='big-title'>pho•to•gra•phy</div>
-            <div className='big-title-spell'>/fəˈtɒɡ.rə.fi/ noun</div>
-            <div className='definitions'>1. A silly definition</div>
+            <div className='section'>
+                <div className='section-title'>
+                    <div className='big-title'>fo•to•gra•fí•a</div>
+                    <div className='big-title-spell'>sustantivo</div>
+                    {/* /fəˈtɒɡ.rə.fi/ */}
+                    <div className='definitions'>
+                        1. El arte de congelar el tiempo en una imagen
+                    </div>
+                </div>
+                <div className='section-spacer' />
+                <div className='section-intro'>
+                    La fotografía es la herramienta que en ocasiones me ayuda a
+                    comunicar historias y sentimientos libremente. A veces me
+                    encuentro sacandole fotos a objetos cuando me llama la
+                    atención una luz o simplemente cuando quiero compartirlo con
+                    otras personas. Desde una piedra hasta una nube rara,
+                    cualquier foto puede tener una historia detrás, y eso es lo
+                    que me encanta de este arte.
+                </div>
+            </div>
 
             <Masonry
                 breakpointCols={{ default: 3, 1000: 2, 650: 1 }}

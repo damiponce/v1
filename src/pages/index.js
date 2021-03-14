@@ -14,36 +14,37 @@ export default function Home() {
     return (
         <div className='container'>
             <Head>
-                <title>Damián's Portfolio</title>
+                <title>Portfolio de Damián</title>
                 <link rel='shortcut icon' href='/favicon.ico' />
             </Head>
 
             <main className={styles.main} id='main_home'>
-                <h1 className='title'>Hey, I'm Damián!</h1>
+                <h1 className='title'>Hola, soy Damián</h1>
 
                 <p className='description'>
-                    I'm an amateur developer <br /> and casual photographer.
+                    Soy un desarrollador aficionado, y un diseñador gráfico y
+                    fotógrafo por diversión.
                 </p>
 
                 <div className={styles.pageLinksGroup}>
                     <Link href='/coding'>
                         <a meta='aul' className={styles.pageLink}>
-                            > Coding
+                            > Programación
                         </a>
                     </Link>
                     <Link href='/design'>
                         <a meta='aul' className={styles.pageLink}>
-                            > Design
+                            > Diseño
                         </a>
                     </Link>
                     <Link href='/photography'>
                         <a meta='aul' className={styles.pageLink}>
-                            > Photography
+                            > Fotografía
                         </a>
                     </Link>
                     <Link href='/about'>
                         <a meta='aul' className={styles.pageLink}>
-                            > About me
+                            > Sobre mí
                         </a>
                     </Link>
                 </div>

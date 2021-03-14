@@ -16,9 +16,12 @@ export function getAllPhotos() {
         const width = dimensions.width;
         const height = dimensions.height;
         const ratio =
-            dimensions.orientation % 2 || dimensions.type != 'jpg'
+            dimensions.orientation % 2 ||
+            dimensions.type != 'jpg' ||
+            (dimensions.type == 'jpg' && dimensions.orientation == null)
                 ? width / height
                 : height / width;
+        const orientation = dimensions.orientation || null;
         // Combine the data and return it
         return {
             id,
@@ -27,6 +30,7 @@ export function getAllPhotos() {
             height,
             ratio,
             index,
+            orientation,
         };
     });
 

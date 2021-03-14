@@ -49,16 +49,16 @@ export default function Layout({ children }) {
                 </div>
                 <div className={styles.links} id='js-menu'>
                     <Link href='/coding'>
-                        <a meta='aul'>Coding</a>
+                        <a meta='aul'>Programación</a>
                     </Link>
                     <Link href='/design'>
-                        <a meta='aul'>Design</a>
+                        <a meta='aul'>Diseño</a>
                     </Link>
                     <Link href='/photography'>
-                        <a meta='aul'>Photography</a>
+                        <a meta='aul'>Fotografía</a>
                     </Link>
                     <Link href='/about'>
-                        <a meta='aul'>About me</a>
+                        <a meta='aul'>Sobre mí</a>
                     </Link>
                 </div>
             </header>

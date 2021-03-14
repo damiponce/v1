@@ -2,12 +2,6 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Layout from '../components/layout';
-import {
-    BrowserView,
-    MobileView,
-    isBrowser,
-    isMobile,
-} from 'react-device-detect';
 import Masonry from 'react-masonry-css';
 import { customLoader, getAllDesigns } from '../components/utils';
 import designs from '../public/designs.json';
@@ -28,16 +22,33 @@ export default function Design({ allDesignsData }) {
     return (
         <Layout>
             <Head>
-                <title>Design - Damián Ponce</title>
+                <title>Diseño - Damián Ponce</title>
             </Head>
 
-            <div className='big-title'>de•sign</div>
-            <div className='big-title-spell'>/dɪˈzʌɪn/ noun</div>
-            <div className='definitions'>1. A silly definition</div>
+            <div className='section'>
+                <div className='section-title'>
+                    <div className='big-title'>di•se•ño</div>
+                    <div className='big-title-spell'>sustantivo</div>
+                    {/* /dɪˈzʌɪn/ */}
+                    <div className='definitions'>
+                        1. El arte de congelar el tiempo en una imagen
+                    </div>
+                </div>
+                <div className='section-spacer' />
+                <div className='section-intro'>
+                    La fotografía es la herramienta que en ocasiones me ayuda a
+                    comunicar historias y sentimientos libremente. A veces me
+                    encuentro sacandole fotos a objetos cuando me llama la
+                    atención una luz o simplemente cuando quiero compartirlo con
+                    otras personas. Desde una piedra hasta una nube rara,
+                    cualquier foto puede tener una historia detrás, y eso es lo
+                    que me encanta de este arte.
+                </div>
+            </div>
 
             {Object.entries(designs).map((key) => {
                 return (
-                    <div className={styles.topic}>
+                    <div className={styles.topic} id='topic'>
                         <div className={styles.title}>{key[0]}</div>
                         {Object.entries(key[1]).map((key) => {
                             let cols = {};
