@@ -1,0 +1,29 @@
+{
+    "Playlists de Spotify": [
+        {
+            "desc": "Dos cosas que me encantan son la música y el diseño, asi que cuál mejor combinación de ámbas que diseñar portadas para mis playlists de Spotify.",
+            "cols": 3,
+            "pics": [
+                "bangers.png",
+                "headbangerz.jpg",
+                "blues.jpg",
+                "nacionalmente-bueno.jpg",
+                "rap-masters.jpg",
+                "rewind-music.jpg",
+                "rap-spotify.jpg"
+            ]
+        }
+    ],
+    "qalquid": [
+        {
+            "desc": "kek",
+            "cols": 2,
+            "pics": ["headbangerz.jpg", "headbangerz.jpg"]
+        },
+        {
+            "desc": "Chau",
+            "cols": 2,
+            "pics": ["headbangerz.jpg", "headbangerz.jpg"]
+        }
+    ]
+}

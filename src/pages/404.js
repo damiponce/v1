@@ -11,7 +11,7 @@ export default function Custom404() {
             <img
                 className={styles.oops}
                 src='/oops.svg'
-                viewbox='0 0 100% 100%'
+                viewBox='0 0 100% 100%'
             />
         </div>
     );

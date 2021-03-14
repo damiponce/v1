@@ -10,6 +10,7 @@
     "dependencies": {
         "file-loader": "^6.2.0",
         "fs": "^0.0.1-security",
+        "gray-matter": "^4.0.2",
         "image-size": "^0.9.4",
         "masonry-layout": "^4.2.2",
         "next": "^10.0.0",

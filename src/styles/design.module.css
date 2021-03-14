@@ -1,0 +1,29 @@
+.card {
+    transition: transform 0.1s ease;
+}
+
+.image {
+    width: 100px;
+    height: 100px;
+}
+
+.topic {
+    margin-top: 3rem;
+}
+
+.subtopic {
+}
+
+.title {
+    font-family: Work Sans;
+    font-weight: 700;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    font-family: Work Sans;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-block: 1em;
+}

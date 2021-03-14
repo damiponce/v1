@@ -52,6 +52,7 @@ export function getAllDesigns() {
                 : height / width;
         // Combine the data and return it
         return {
+            fileName,
             id,
             fullPath,
             width,
@@ -61,12 +62,19 @@ export function getAllDesigns() {
         };
     });
 
-    return allDesignsData;
+    const arr = [];
+
+    for (let i = 0; i < allDesignsData.length; i++) {
+        let tempArr = [allDesignsData[i]['fileName'], allDesignsData[i]];
+        arr.push(tempArr);
+    }
+
+    return Object.fromEntries(arr);
 }
 
-export const customLoader = ({ src, width, height, quality }) => {
+export const customLoader = ({ src, width, quality }) => {
     // return `https://example.com/${src}?w=${width}&q=${quality || 75}`
-    return `https://cdn.statically.io/img/damiponce.github.io/${src}?w=${width}&q=${
+    return `https://cdn.statically.io/img/damiponce.github.io/${src}?w=${1000}&q=${
         quality || 75
     }`;
 };
