@@ -41,6 +41,7 @@ main {
     // align-items: center;
     width: 100%;
     max-width: 1398px;
+    overflow: hidden;
 }
 
 main > #topic ~ #topic {

@@ -27,7 +27,7 @@
     color: #222;
     line-height: normal;
     margin-bottom: 0.2em;
-    white-space: pre;
+    /* white-space: pre; */
 }
 
 .subname {

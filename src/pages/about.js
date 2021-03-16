@@ -30,7 +30,7 @@ export default function Work() {
                 </div>
                 <div className={styles.intro + ' section-intro'}>
                     <div className={styles.name}>
-                        Hola, soy <wbr />
+                        Hola, soy <br />
                         Damián Ponce
                     </div>
                     <div className={styles.subname}>
