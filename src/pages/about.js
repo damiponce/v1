@@ -22,14 +22,17 @@ export default function Work() {
                 >
                     <Image
                         loader={customLoader}
-                        src='/images/designs/dam-headshot-1.png' // <--- /dam-headshot-1.png
+                        src='/dam-headshot-1.png' // <--- /dam-headshot-1.png
                         width={400}
                         height={400}
                         quality={100}
                     />
                 </div>
                 <div className={styles.intro + ' section-intro'}>
-                    <div className={styles.name}>Hola, soy Damián Ponce</div>
+                    <div className={styles.name}>
+                        Hola, soy <wbr />
+                        Damián Ponce
+                    </div>
                     <div className={styles.subname}>
                         Soy un técnico aviónico con intereses en la
                         programación, el diseño y la fotografía. Actualmente
