@@ -78,7 +78,7 @@ export default function Photography({ allPicturesData }) {
                             width={650}
                             height={650 / pic.ratio}
                             quality={100}
-                        ></Image>
+                        />
                     </div>
                 ))}
             </Masonry>

@@ -31,18 +31,20 @@ export default function Design({ allDesignsData }) {
                     <div className='big-title-spell'>sustantivo</div>
                     {/* /dɪˈzʌɪn/ */}
                     <div className='definitions'>
-                        1. El arte de congelar el tiempo en una imagen
+                        1. Actividad que une la creatividad y la técnica con el
+                        fin de crear objetos útiles y bellos.
                     </div>
                 </div>
                 <div className='section-spacer' />
                 <div className='section-intro'>
-                    La fotografía es la herramienta que en ocasiones me ayuda a
-                    comunicar historias y sentimientos libremente. A veces me
-                    encuentro sacandole fotos a objetos cuando me llama la
-                    atención una luz o simplemente cuando quiero compartirlo con
-                    otras personas. Desde una piedra hasta una nube rara,
-                    cualquier foto puede tener una historia detrás, y eso es lo
-                    que me encanta de este arte.
+                    El diseño está en todos lados, nos rodea día a día. A veces
+                    se nota, y hasta llegamos a quejarnos de los que están mal
+                    realizados. Pero hay ocasiones en las cuales un objeto o una
+                    herramienta simplemente existe, y cumple su funcion. Esas
+                    cosas son consecuencia de un buen diseño. La meta del diseño
+                    como herramienta artística o técnica es comunicar o realizar
+                    una tarea de la mejor manera posible. El diseño de verdad y
+                    bien hecho no se ve como un diseño, es lo que tiene que ser.
                 </div>
             </div>
 
@@ -113,7 +115,7 @@ export default function Design({ allDesignsData }) {
                                                             .ratio
                                                     }
                                                     quality={100}
-                                                ></Image>
+                                                />
                                             </div>
                                         ))}
                                     </Masonry>

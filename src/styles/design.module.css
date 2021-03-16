@@ -1,5 +1,7 @@
 .card {
     transition: transform 0.1s ease;
+    font-size: 0;
+    box-shadow: 0px 0px 7px #888;
 }
 
 .image {
@@ -18,14 +20,17 @@
     font-weight: 700;
     font-size: 1.7rem;
     text-transform: uppercase;
+    color: #222;
 }
 
 .subtitle {
     font-family: Work Sans;
     font-weight: 400;
-    font-size: 1.2rem;
-    margin-block: 1em;
-    max-width: 700px;
+    font-size: 1.3rem;
+    line-height: 1.3em;
+    color: #333;
+    margin-block-start: 0.5em;
+    margin-block-end: 1em;
+    max-width: 600px;
     text-align: justify;
-    text-justify: inter-word;
 }

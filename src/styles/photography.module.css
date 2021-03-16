@@ -9,6 +9,7 @@
 
 .card {
     transition: transform 0.1s ease;
+    font-size: 0;
 }
 
 .card div {

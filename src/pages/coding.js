@@ -9,7 +9,7 @@ export default function Work() {
                 <title>Programación - Damián Ponce</title>
             </Head>
 
-            <h1 className='title'>WIP</h1>
+            <h1 className='big-title'>En desarrollo.</h1>
         </Layout>
     );
 }
