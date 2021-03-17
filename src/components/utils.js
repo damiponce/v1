@@ -51,7 +51,9 @@ export function getAllDesigns() {
         const width = dimensions.width;
         const height = dimensions.height;
         const ratio =
-            dimensions.orientation % 2 || dimensions.type != 'jpg'
+            dimensions.orientation % 2 ||
+            dimensions.type != 'jpg' ||
+            (dimensions.type == 'jpg' && dimensions.orientation == null)
                 ? width / height
                 : height / width;
         // Combine the data and return it

@@ -18,7 +18,7 @@ export default function Work() {
             <div className={styles.section + ' section'}>
                 <div
                     className={styles.picture + ' section-title'}
-                    style={{ marginBottom: '15px', marginInline: '2rem' }}
+                    style={{ marginBottom: '30px', marginInline: '2rem' }}
                 >
                     <Image
                         loader={customLoader}
@@ -34,17 +34,44 @@ export default function Work() {
                         Damián Ponce
                     </div>
                     <div className={styles.subname}>
-                        Soy un técnico aviónico con intereses en la
+                        Soy un técnico en aviónica con intereses en la
                         programación, el diseño y la fotografía. Actualmente
-                        estoy estudiando ingeniería aeronáutica.
+                        estoy estudiando ingeniería aeronáutica. Soy una persona
+                        autodidacta, y muy atenta a los detalles finos al
+                        momento de trabajar en cualquier proyecto.
                     </div>
                 </div>
-                {/* <div>
-                    <div className={styles.name}></div>
-                    <div className={styles.subname}>
-                        
+            </div>
+            <div className={styles.all_groups}>
+                <div className={styles.group}>
+                    <div className={styles.abilities_title}>Capacidades</div>
+                    <div className={styles.abilities_text}>
+                        Puedo manejar varias herramientas de imagen, audio y
+                        video como{' '}
+                        <b>
+                            Adobe Photoshop, Illustrator, Lightroom y After
+                            Effects.
+                        </b>{' '}
+                        También tengo experiencia con software de diseño 3D/CAD
+                        como <b>Autodesk AutoCAD, Fusion 360 y Cinema4D.</b>
                     </div>
-                </div> */}
+                </div>
+                <div className={styles.group}>
+                    <div className={styles.abilities_title}>Experiencias</div>
+                    <div className={styles.abilities_text}>
+                        Participé de la competencia internacional{' '}
+                        <a
+                            href='https://2019.spaceappschallenge.org/challenges/living-our-world/bloom-or-not-bloom/teams/quid-pro-algae/project'
+                            target='_blank'
+                            meta='wul'
+                        >
+                            NASA Space Apps Challenge 2019
+                        </a>
+                        ; en la cual ayudé al diseño parcial de los gráficos
+                        para el proyecto y también a la realización del proyecto
+                        en sí.
+                    </div>
+                </div>
             </div>
         </Layout>
     );

@@ -15,7 +15,7 @@
 }
 
 .intro {
-    margin: 0 !important;
+    margin: 0 0 30px 0 !important;
     height: fit-content;
     align-self: center;
 }
@@ -49,7 +49,55 @@
     .subname {
         text-align: left;
     } */
-    .subname {
-        max-width: 100%;
+    .picture {
+        max-height: 275px;
+        max-width: 275px;
     }
+
+    .subname,
+    .all_groups {
+        max-width: 100%;
+        margin-inline: 1rem;
+    }
+}
+
+.abilities_title {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: #222;
+    line-height: normal;
+    margin-bottom: 0.2em;
+}
+
+.abilities_text {
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #222;
+    max-width: 600px;
+    line-height: 1.4em;
+    /* white-space: break-spaces; */
+}
+
+.group {
+    max-width: fit-content;
+    margin-top: 3rem;
+}
+
+.group:nth-child(odd) {
+    margin-right: auto;
+    text-align: left;
+}
+
+.group:nth-child(even) {
+    margin-left: auto;
+    text-align: right;
+}
+
+.group:first-of-type {
+    margin-top: 0;
+}
+
+.all_groups {
+    margin-top: 40px;
 }
