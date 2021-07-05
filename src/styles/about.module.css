@@ -1,7 +1,7 @@
 .picture {
     border-radius: 50%;
     /* padding: 5px; */
-    box-shadow: 0 5px 10px #555;
+    /* box-shadow: 0 5px 10px #555; */
     max-height: 325px;
     max-width: 325px;
     width: 100%;
@@ -24,17 +24,17 @@
     font-weight: 800;
     font-size: 2.6rem;
     text-align: center;
-    color: #222;
+    /* color: #222; */
     line-height: normal;
     margin-bottom: 0.2em;
     /* white-space: pre; */
 }
 
 .subname {
-    font-weight: 400;
+    font-weight: 300;
     font-size: 1.3rem;
     text-align: center;
-    color: #222;
+    /* color: #222; */
     max-width: 72%;
     justify-content: center;
     margin-inline: auto;
@@ -44,7 +44,7 @@
     margin-inline: auto;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 750px) {
     /* .name,
     .subname {
         text-align: left;
@@ -65,15 +65,15 @@
     display: inline-block;
     font-weight: 700;
     font-size: 2.2rem;
-    color: #222;
+    /* color: #222; */
     line-height: normal;
     margin-bottom: 0.2em;
 }
 
 .abilities_text {
-    font-weight: 400;
+    font-weight: 300;
     font-size: 1.2rem;
-    color: #222;
+    /* color: #222; */
     max-width: 600px;
     line-height: 1.4em;
     /* white-space: break-spaces; */

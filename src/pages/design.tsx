@@ -8,15 +8,16 @@ import designs from '../public/designs.json';
 
 import styles from '../styles/design.module.css';
 
-export async function getStaticProps() {
+import { GetStaticProps } from 'next';
+
+export const getStaticProps: GetStaticProps = async (context) => {
     var allDesignsData = getAllDesigns();
-    console.log(allDesignsData);
     return {
         props: {
             allDesignsData,
         },
     };
-}
+};
 
 export default function Design({ allDesignsData }) {
     return (
@@ -34,23 +35,32 @@ export default function Design({ allDesignsData }) {
                         1. Actividad que une la creatividad y la técnica con el
                         fin de crear objetos útiles y bellos.
                     </div>
+                    <div className='separator' />
                 </div>
                 <div className='section-spacer' />
                 <div className='section-intro'>
-                    El diseño está en todos lados, nos rodea día a día. A veces
-                    se nota, y hasta llegamos a quejarnos de los que están mal
-                    realizados. Pero hay ocasiones en las cuales un objeto o una
-                    herramienta simplemente existe, y cumple su funcion. Esas
-                    cosas son consecuencia de un buen diseño. La meta del diseño
-                    como herramienta artística o técnica es comunicar o realizar
-                    una tarea de la mejor manera posible. El diseño de verdad y
-                    bien hecho no se ve como un diseño, es lo que tiene que ser.
+                    <p>
+                        El diseño está en todos lados, nos rodea día a día. A
+                        veces se nota, y hasta llegamos a quejarnos de los que
+                        están mal realizados.
+                    </p>
+                    <p>
+                        Pero hay ocasiones en las cuales un objeto o una
+                        herramienta simplemente existe, y cumple su funcion.
+                        Esas cosas son consecuencia de un buen diseño.
+                    </p>
+                    <p>
+                        La meta del diseño como herramienta artística o técnica
+                        es comunicar o realizar una tarea de la mejor manera
+                        posible. El diseño de verdad y bien hecho no se ve como
+                        un diseño, es lo que tiene que ser.
+                    </p>
                 </div>
             </div>
 
             {Object.entries(designs).map((key) => {
                 return (
-                    <div className={styles.topic} id='topic'>
+                    <div className={styles.topic} id='topic' key={key}>
                         <div className={styles.title}>{key[0]}</div>
                         {Object.entries(key[1]).map((key) => {
                             let cols = {};
@@ -97,25 +107,30 @@ export default function Design({ allDesignsData }) {
                                                 key={key}
                                                 className={styles.card}
                                             >
-                                                <Image
-                                                    className={
-                                                        styles.image +
-                                                        ' no-touch'
-                                                    }
-                                                    loader={customLoader}
-                                                    src={
-                                                        allDesignsData[key]
-                                                            .fullPath
-                                                    }
-                                                    alt={allDesignsData[key].id}
-                                                    width={650}
-                                                    height={
-                                                        650 /
-                                                        allDesignsData[key]
-                                                            .ratio
-                                                    }
-                                                    quality={100}
-                                                />
+                                                {allDesignsData[key] ? (
+                                                    <Image
+                                                        className={
+                                                            styles.image +
+                                                            ' no-touch'
+                                                        }
+                                                        loader={customLoader}
+                                                        src={
+                                                            allDesignsData[key]
+                                                                .fullPath
+                                                        }
+                                                        alt={
+                                                            allDesignsData[key]
+                                                                .id
+                                                        }
+                                                        width={650}
+                                                        height={
+                                                            650 /
+                                                            allDesignsData[key]
+                                                                .ratio
+                                                        }
+                                                        quality={100}
+                                                    />
+                                                ) : null}
                                             </div>
                                         ))}
                                     </Masonry>

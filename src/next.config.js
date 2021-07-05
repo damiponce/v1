@@ -1,14 +1,18 @@
 const isProd = process.env.NODE_ENV === 'production';
 
 module.exports = {
-    webpack: (config, options) => {
+    typescript: {
+        ignoreBuildErrors: true,
+    },
+    reactStrictMode: false,
+    webpack: (config, { isServer }) => {
+        if (!isServer) {
+            config.resolve.fallback.fs = false;
+        }
         config.module.rules.push({
             test: /\.(jpe?g|png|svg)$/i,
             use: 'url-loader',
         });
-        config.node = {
-            fs: 'empty',
-        };
         return config;
     },
     // Set placeholder loader for exporting to static HTML

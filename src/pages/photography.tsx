@@ -11,6 +11,7 @@ import * as d_styles from '../styles/design.module.css';
 export async function getStaticProps() {
     var allPicturesData = getAllPhotos();
     allPicturesData = shuffle(allPicturesData);
+
     return {
         props: {
             allPicturesData,
@@ -50,16 +51,22 @@ export default function Photography({ allPicturesData }) {
                     <div className='definitions'>
                         1. El arte de congelar el tiempo en una imagen
                     </div>
+                    <div className='separator' />
                 </div>
                 <div className='section-spacer' />
                 <div className='section-intro'>
-                    La fotografía es la herramienta que en ocasiones me ayuda a
-                    comunicar historias y sentimientos libremente. A veces me
-                    encuentro sacandole fotos a objetos cuando me llama la
-                    atención una luz o simplemente cuando quiero compartirlo con
-                    otras personas. Desde una piedra hasta una nube rara,
-                    cualquier foto puede tener una historia detrás, y eso es lo
-                    que me encanta de este arte.
+                    <p>
+                        La fotografía es la herramienta que en ocasiones me
+                        ayuda a comunicar historias y sentimientos libremente. A
+                        veces me encuentro sacandole fotos a objetos cuando me
+                        llama la atención una luz o simplemente cuando quiero
+                        compartirlo con otras personas.
+                    </p>
+                    <p>
+                        Desde una piedra hasta una nube rara, cualquier foto
+                        puede tener una historia detrás, y eso es lo que me
+                        encanta de este arte.
+                    </p>
                 </div>
             </div>
 

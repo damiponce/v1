@@ -8,11 +8,7 @@ export default function Custom404() {
             <Head>
                 <title>Oops!</title>
             </Head>
-            <img
-                className={styles.oops}
-                src='/oops.svg'
-                viewBox='0 0 100% 100%'
-            />
+            <img className={styles.oops} src='/oops.svg' alt='' />
         </div>
     );
 }

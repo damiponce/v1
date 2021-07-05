@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800;900');
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700');
 
 // @font-face {
@@ -13,13 +14,23 @@ html,
 body {
     padding: 0;
     margin: 0;
-    font-family: Work Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    font-family: Sora, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
         Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
         sans-serif;
+    color: #eee;
 }
 
 * {
     box-sizing: border-box;
+}
+
+b {
+    font-weight: 700;
+}
+
+body {
+    background-color: #1a1a1a;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='530' height='63.6' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23444444' stroke-width='9' stroke-opacity='0.28'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 .container {
@@ -29,7 +40,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    color: #fff;
 }
 
 main {
@@ -44,30 +55,27 @@ main {
     overflow: hidden;
 }
 
+main > .section ~ #topic {
+    margin-top: 2rem;
+}
+
 main > #topic ~ #topic {
-    margin-top: 3rem;
+    margin-top: 4.5rem;
 }
 #main_home {
     margin-top: 0;
 }
 
-footer {
+.footer {
+    padding: 2rem 3rem;
+    //  background-color: #fff1;
     width: 100%;
-    height: 100px;
-    border-top: 1px solid #eaeaea;
+    max-width: 1398px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-footer img {
-    margin-left: 0.5rem;
-}
-
-footer a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-flow: row wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    overflow: hidden;
 }
 
 a {
@@ -96,15 +104,21 @@ a {
 
 .title,
 .description {
-    text-align: center;
+    text-align: left;
 }
 
 .description {
     line-height: 1.5;
     font-size: 1.5rem;
-    max-width: 35rem;
+    max-width: 38rem;
     // font-variation-settings: 'wght' 500;
-    font-weight: 500;
+    font-weight: 300;
+    padding-left: 16px;
+    letter-spacing: 1px;
+    color: #ddd;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 code {
@@ -134,7 +148,8 @@ code {
 .big-title {
     font-size: 3rem;
     text-align: left;
-    color: #222;
+    //  color: #222;
+    color: #eee;
     font-weight: 700;
     letter-spacing: 2px;
     font-family: 'Crimson Text';
@@ -143,8 +158,8 @@ code {
 .big-title-spell {
     font-size: 1.5rem;
     text-align: left;
-    color: rgb(95, 95, 95);
-    font-weight: 400;
+    color: #999;
+    font-weight: 300;
     letter-spacing: 0px;
     font-family: 'Crimson Text';
     margin-top: -0.2rem;
@@ -153,16 +168,25 @@ code {
 .definitions {
     font-size: 1.6rem;
     text-align: left;
-    color: #000;
+    color: #eee;
     font-weight: 400;
     letter-spacing: 0px;
     font-family: 'Crimson Text';
     margin-bottom: 2rem;
 }
 
+.separator {
+    height: 0.5px;
+    width: 75%;
+    justify-self: center;
+    background-color: #bbb;
+    margin-bottom: 2rem;
+}
+
 .section-intro {
-    font-family: Work Sans;
+    font-family: Sora;
     font-weight: 400;
+    color: #eee;
     font-size: 1.3rem;
     line-height: 1.4em;
     margin-block-end: 2em;
@@ -170,6 +194,13 @@ code {
     text-align: justify;
     margin-left: auto;
 }
+.section-intro > p:first-child {
+    margin-top: 0;
+}
+.section-intro > p:last-child {
+    margin-bottom: 0;
+}
+
 // .grid {
 //     display: flex;
 //     align-items: center;
@@ -214,7 +245,7 @@ code {
     height: 1em;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 750px) {
     .grid {
         width: 100%;
         flex-direction: column;
@@ -223,6 +254,15 @@ code {
     main {
         padding: 2rem 1rem;
     }
+
+    .footer {
+        padding: 2rem 1rem;
+    }
+
+    .section-intro {
+        text-align: left;
+        margin-left: 0;
+    }
 }
 
 $aul: rgb(235, 201, 243);
@@ -230,6 +270,14 @@ $aul: rgb(235, 201, 243);
 $duration: 0.2s;
 $distance: 7px;
 $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+a[meta*='iul'] {
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 0.2em;
+    z-index: 1;
+    width: fit-content;
+}
 
 a[meta*='aul'] {
     position: relative;
@@ -339,7 +387,7 @@ a[meta*='aul'] {
 }
 
 :root {
-    --mainColor: #ebc9f3;
+    --mainColor: #ebc9f38e;
 }
 
 a[meta*='wul'] {
@@ -353,7 +401,7 @@ a[meta*='wul'] {
     background-position: 0 100%;
     background-repeat: repeat-x;
     background-size: 4px 4px;
-    color: #000;
+    //  color: #000;
     text-decoration: none;
     transition: background-size 0.2s, border-radius 0.2s;
     border-radius: 2px;
