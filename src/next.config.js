@@ -22,5 +22,5 @@ module.exports = {
         ? 'https://cdn.statically.io/gh/damiponce/damiponce.github.io/gh-pages/'
         : '',
     // Set custom directory build.
-    distDir: 'out',
+    // distDir: 'out',
 };
