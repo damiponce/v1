@@ -1,14 +1,16 @@
+import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Layout from '../components/layout';
+import {
+    customLoader,
+    getAllDesigns,
+    GroupPicsType,
+} from '../components/utils';
 import Masonry from 'react-masonry-css';
-import { customLoader, getAllDesigns } from '../components/utils';
 import designs from '../public/designs.json';
-
 import styles from '../styles/design.module.css';
-
-import { GetStaticProps } from 'next';
 
 export const getStaticProps: GetStaticProps = async (context) => {
     var allDesignsData = getAllDesigns();
@@ -19,11 +21,19 @@ export const getStaticProps: GetStaticProps = async (context) => {
     };
 };
 
-export default function Design({ allDesignsData }) {
+export default function Design({
+    allDesignsData,
+}: {
+    allDesignsData: GroupPicsType;
+}) {
     return (
         <Layout>
             <Head>
                 <title>Diseño - Damián Ponce</title>
+                <meta
+                    name='viewport'
+                    content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
+                />
             </Head>
 
             <div className='section'>
@@ -60,7 +70,7 @@ export default function Design({ allDesignsData }) {
 
             {Object.entries(designs).map((key) => {
                 return (
-                    <div className={styles.topic} id='topic' key={key}>
+                    <div className={styles.topic} id='topic' key={key[0]}>
                         <div className={styles.title}>{key[0]}</div>
                         {Object.entries(key[1]).map((key) => {
                             let cols = {};

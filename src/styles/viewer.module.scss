@@ -1,0 +1,63 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 90000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+.background {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 90000;
+    pointer-events: auto;
+}
+
+.container > * {
+    z-index: 90001;
+    pointer-events: auto;
+}
+
+.card {
+    pointer-events: all;
+    font-size: 0;
+    align-items: center;
+    height: fit-content;
+}
+
+.left {
+    position: absolute;
+    left: 0;
+    z-index: 90002;
+}
+.right {
+    position: absolute;
+    right: 0;
+    z-index: 90002;
+}
+
+.button {
+    height: 100vh;
+    min-width: 48px;
+    background-color: #f009;
+}
+
+.closeButton {
+    margin: 12px;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #00fa;
+    z-index: 90003;
+}

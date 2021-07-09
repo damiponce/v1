@@ -1,8 +1,22 @@
 import fs from 'fs';
 import path from 'path';
 const sizeOf = require('image-size');
+export interface PicType {
+    fileName: string;
+    id: string;
+    fullPath: string;
+    width: number;
+    height: number;
+    ratio: number;
+    index: number;
+    orientation?: number;
+}
 
-export function getAllPhotos() {
+export interface GroupPicsType {
+    [index: string]: PicType;
+}
+
+export function getAllPhotos(): PicType[] {
     const picsDirectory = path.join(process.cwd(), 'public/images/photos');
     // Get file names
     const fileNames = fs.readdirSync(picsDirectory);
@@ -24,6 +38,7 @@ export function getAllPhotos() {
         const orientation = dimensions.orientation || null;
         // Combine the data and return it
         return {
+            fileName,
             id,
             fullPath,
             width,
@@ -37,7 +52,7 @@ export function getAllPhotos() {
     return allPhotosData;
 }
 
-export function getAllDesigns() {
+export function getAllDesigns(): GroupPicsType {
     const picsDirectory = path.join(process.cwd(), 'public/images/designs');
     // Get file names
     const fileNames = fs.readdirSync(picsDirectory);
@@ -78,15 +93,15 @@ export function getAllDesigns() {
     return Object.fromEntries(arr);
 }
 
-interface Loader {
-    src: string;
-    width: number;
-    quality: number;
-}
+import { ImageLoader, ImageLoaderProps } from 'next/image';
 
-export const customLoader = (loader: Loader) => {
+export const customLoader: ImageLoader = (props: ImageLoaderProps) => {
     // return `https://example.com/${src}?w=${width}&q=${quality || 75}`
     return `https://cdn.statically.io/img/damiponce.github.io/${
-        loader.src
-    }?w=${1000}&q=${loader.quality || 75}`;
+        props.src
+    }?w=${1000}&q=${props.quality || 75}`;
+};
+export const fullResCustomLoader: ImageLoader = (props: ImageLoaderProps) => {
+    // return `https://example.com/${src}?w=${width}&q=${quality || 75}`
+    return `https://damiponce.github.io/${props.src}?&q=${100}`;
 };

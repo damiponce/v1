@@ -11,6 +11,10 @@ export default function Home() {
             <Head>
                 <title>Portfolio de Damián</title>
                 <link rel='shortcut icon' href='/favicon.ico' />
+                <meta
+                    name='viewport'
+                    content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
+                />
             </Head>
 
             <main className={styles.main} id='main_home'>
@@ -22,6 +26,7 @@ export default function Home() {
                 </p>
 
                 <div className={styles.pageLinksGroup}>
+                    {/* // @ts-ignore */}
                     <NavLink>
                         <Link href='/photography'>
                             <a className={styles.pageLink}>Fotografía</a>

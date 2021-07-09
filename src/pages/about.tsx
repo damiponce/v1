@@ -61,14 +61,16 @@ export default function Work() {
                     <div className={styles.abilities_title}>Experiencias</div>
                     <div className={styles.abilities_text}>
                         Participé de la competencia internacional{' '}
-                        <a
-                            href='https://2019.spaceappschallenge.org/challenges/living-our-world/bloom-or-not-bloom/teams/quid-pro-algae/project'
-                            target='_blank'
-                            rel='noreferrer'
-                            //  meta='wul'
-                        >
-                            NASA Space Apps Challenge 2019
-                        </a>
+                        <b>
+                            <a
+                                href='https://2019.spaceappschallenge.org/challenges/living-our-world/bloom-or-not-bloom/teams/quid-pro-algae/project'
+                                target='_blank'
+                                rel='noreferrer'
+                                //  meta='wul'
+                            >
+                                NASA Space Apps Challenge 2019
+                            </a>
+                        </b>
                         ; en la cual ayudé al diseño parcial de los gráficos
                         para el proyecto y también a la realización del proyecto
                         en sí.

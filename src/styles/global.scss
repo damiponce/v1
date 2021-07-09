@@ -271,60 +271,60 @@ $duration: 0.2s;
 $distance: 7px;
 $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-a[meta*='iul'] {
-    position: relative;
-    text-decoration: none;
-    padding-bottom: 0.2em;
-    z-index: 1;
-    width: fit-content;
-}
+// a[meta*='iul'] {
+//     position: relative;
+//     text-decoration: none;
+//     padding-bottom: 0.2em;
+//     z-index: 1;
+//     width: fit-content;
+// }
 
-a[meta*='aul'] {
-    position: relative;
-    text-decoration: none;
-    padding-bottom: 0.2em;
-    z-index: 1;
-    width: fit-content;
-    pointer-events: initial;
+// a[meta*='aul'] {
+//     position: relative;
+//     text-decoration: none;
+//     padding-bottom: 0.2em;
+//     z-index: 1;
+//     width: fit-content;
+//     pointer-events: initial;
 
-    &:before,
-    &:after {
-        content: '';
-        position: absolute;
-        bottom: 0.25em;
-        left: 0;
-        right: 0;
-        height: 0.5em;
-        border-radius: 0.14em;
-        background-color: $aul;
-        z-index: -1;
-    }
-    &:before {
-        opacity: 0;
-        transform: translateY(-$distance);
-        transition: transform 0s $easeOutBack, opacity 0s;
-    }
-    &:after {
-        opacity: 0;
-        transform: translateY($distance/2);
-        transition: transform $duration $easeOutBack, opacity $duration;
-    }
-    &:hover,
-    &:focus {
-        &:before,
-        &:after {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        &:before {
-            transition: transform $duration $easeOutBack, opacity $duration;
-        }
-        &:after {
-            transition: transform 0s $duration $easeOutBack,
-                opacity 0s $duration;
-        }
-    }
-}
+//     &:before,
+//     &:after {
+//         content: '';
+//         position: absolute;
+//         bottom: 0.25em;
+//         left: 0;
+//         right: 0;
+//         height: 0.5em;
+//         border-radius: 0.14em;
+//         background-color: $aul;
+//         z-index: -1;
+//     }
+//     &:before {
+//         opacity: 0;
+//         transform: translateY(-$distance);
+//         transition: transform 0s $easeOutBack, opacity 0s;
+//     }
+//     &:after {
+//         opacity: 0;
+//         transform: translateY($distance/2);
+//         transition: transform $duration $easeOutBack, opacity $duration;
+//     }
+//     &:hover,
+//     &:focus {
+//         &:before,
+//         &:after {
+//             opacity: 1;
+//             transform: translateY(0);
+//         }
+//         &:before {
+//             transition: transform $duration $easeOutBack, opacity $duration;
+//         }
+//         &:after {
+//             transition: transform 0s $duration $easeOutBack,
+//                 opacity 0s $duration;
+//         }
+//     }
+// }
 
 .active {
     display: none;

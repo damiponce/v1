@@ -4,7 +4,7 @@ import CursorContext from './Context';
 import { getRelativePosition } from './utils';
 
 export default (Component, type, config) =>
-    ({ passThroughRef, ...props }) => {
+    ({ ...props }) => {
         const context = useContext(CursorContext);
         const { selectedElement, pos } = context;
         const [hovering, setHovering] = useState(false);
@@ -55,7 +55,6 @@ export default (Component, type, config) =>
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 style={styles}
-                ref={passThroughRef}
                 {...props}
             />
         );

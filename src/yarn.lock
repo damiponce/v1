@@ -2920,6 +2920,11 @@ react-masonry-css@^1.0.16:
   resolved "https://registry.yarnpkg.com/react-masonry-css/-/react-masonry-css-1.0.16.tgz#72b28b4ae3484e250534700860597553a10f1a2c"
   integrity sha512-KSW0hR2VQmltt/qAa3eXOctQDyOu7+ZBevtKgpNDSzT7k5LA/0XntNa9z9HKCdz3QlxmJHglTZ18e4sX4V8zZQ==
 
+react-pan-and-zoom-hoc@^2.1.8:
+  version "2.1.8"
+  resolved "https://registry.yarnpkg.com/react-pan-and-zoom-hoc/-/react-pan-and-zoom-hoc-2.1.8.tgz#c603c12c8bce10d69fb05c8733b44bde5b267390"
+  integrity sha512-aediLG8LiGBsBGVTcAhEiGqjRVmdacN7BbN8qEycKrzEosaV5+60PxLCTObdA9O5R6NXHezgw8xBNF+cwfndMg==
+
 react-refresh@0.8.3:
   version "0.8.3"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"
