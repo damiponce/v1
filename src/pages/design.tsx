@@ -1,14 +1,19 @@
+import { GetStaticProps } from 'next';
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Layout from '../components/layout';
+import Viewer from '../components/viewer';
+import {
+    customLoader,
+    getAllDesigns,
+    GroupPicsType,
+    PicType,
+} from '../components/utils';
 import Masonry from 'react-masonry-css';
-import { customLoader, getAllDesigns } from '../components/utils';
 import designs from '../public/designs.json';
-
 import styles from '../styles/design.module.css';
-
-import { GetStaticProps } from 'next';
 
 export const getStaticProps: GetStaticProps = async (context) => {
     var allDesignsData = getAllDesigns();
@@ -19,13 +24,41 @@ export const getStaticProps: GetStaticProps = async (context) => {
     };
 };
 
-export default function Design({ allDesignsData }) {
+export default function Design({
+    allDesignsData,
+}: {
+    allDesignsData: GroupPicsType;
+}) {
+    const [viewer, setViewer] = useState<GroupPicsType | null>();
+    const [index, setIndex] = useState<number>(69);
+    const [title, setTitle] = useState<string>('');
+    const [group, setGroup] = useState<number>(0);
+
+    useEffect(() => {
+        viewer
+            ? (document.body.style.overflow = 'hidden')
+            : (document.body.style.overflow = 'unset');
+        return;
+    }, [viewer]);
+
     return (
         <Layout>
             <Head>
                 <title>Diseño - Damián Ponce</title>
+                <meta
+                    name='viewport'
+                    content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
+                />
             </Head>
-
+            {viewer ? (
+                <Viewer
+                    onClick={() => setViewer(null)}
+                    pic={viewer}
+                    index={index}
+                    title={title}
+                    group={group}
+                />
+            ) : null}
             <div className='section'>
                 <div className='section-title'>
                     <div className='big-title'>di•se•ño</div>
@@ -60,11 +93,11 @@ export default function Design({ allDesignsData }) {
 
             {Object.entries(designs).map((key) => {
                 return (
-                    <div className={styles.topic} id='topic' key={key}>
+                    <div className={styles.topic} id='topic' key={key[0]}>
                         <div className={styles.title}>{key[0]}</div>
-                        {Object.entries(key[1]).map((key) => {
+                        {Object.entries(key[1]).map((llave, index) => {
                             let cols = {};
-                            switch (key[1]['cols']) {
+                            switch (llave[1]['cols']) {
                                 case 3:
                                     cols = {
                                         default: 3,
@@ -87,7 +120,7 @@ export default function Design({ allDesignsData }) {
                             return (
                                 <>
                                     <div className={styles.subtitle}>
-                                        {key[1]['desc']}
+                                        {llave[1]['desc']}
                                     </div>
 
                                     {/* <h2 className='big-title-spell'>
@@ -97,35 +130,49 @@ export default function Design({ allDesignsData }) {
                                         <h2 className='big-title-spell'>
                                             {key[1]['pics']}
                                         </h2> */}
+
                                     <Masonry
                                         breakpointCols={cols}
                                         className='masonry-grid'
                                         columnClassName='masonry-grid_column'
                                     >
-                                        {key[1]['pics'].map((key, value) => (
+                                        {llave[1]['pics'].map((clef) => (
                                             <div
-                                                key={key}
+                                                key={clef}
                                                 className={styles.card}
                                             >
-                                                {allDesignsData[key] ? (
+                                                {allDesignsData[clef] ? (
                                                     <Image
+                                                        onClick={() => (
+                                                            setViewer(
+                                                                allDesignsData,
+                                                            ),
+                                                            setIndex(index),
+                                                            setTitle(key[0]),
+                                                            setGroup(
+                                                                //  llave[1][
+                                                                //      'desc'
+                                                                //  ],
+                                                                index,
+                                                            )
+                                                        )}
                                                         className={
                                                             styles.image +
                                                             ' no-touch'
                                                         }
                                                         loader={customLoader}
                                                         src={
-                                                            allDesignsData[key]
+                                                            allDesignsData[clef]
                                                                 .fullPath
                                                         }
                                                         alt={
-                                                            allDesignsData[key]
+                                                            allDesignsData[clef]
                                                                 .id
                                                         }
                                                         width={650}
                                                         height={
                                                             650 /
-                                                            allDesignsData[key]
+                                                            allDesignsData[clef]
                                                                 .ratio
                                                         }
                                                         quality={100}

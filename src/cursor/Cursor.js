@@ -28,7 +28,7 @@ const Cursor = styled.div`
     position: fixed;
     background: ${({ theme }) => transparentize(0.5, '#bbbbbb')};
     border-radius: 12px;
-    z-index: 69420;
+    z-index: 99999;
     pointer-events: none;
 
     transition: opacity 0.3s;

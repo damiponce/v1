@@ -1,14 +1,15 @@
+import { GetStaticProps } from 'next';
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Layout from '../components/layout';
+import Viewer from '../components/viewer';
+import { customLoader, getAllPhotos, PicType } from '../components/utils';
 import Masonry from 'react-masonry-css';
-import { customLoader, getAllPhotos } from '../components/utils';
-
 import styles from '../styles/photography.module.css';
-import * as d_styles from '../styles/design.module.css';
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async (context) => {
     var allPicturesData = getAllPhotos();
     allPicturesData = shuffle(allPicturesData);
 
@@ -17,9 +18,9 @@ export async function getStaticProps() {
             allPicturesData,
         },
     };
-}
+};
 
-function shuffle(array) {
+function shuffle(array: PicType[]) {
     var currentIndex = array.length,
         temporaryValue,
         randomIndex;
@@ -32,17 +33,42 @@ function shuffle(array) {
         array[currentIndex] = array[randomIndex];
         array[randomIndex] = temporaryValue;
     }
-
+    console.log(array);
     return array;
 }
 
-export default function Photography({ allPicturesData }) {
+export default function Photography({
+    allPicturesData,
+}: {
+    allPicturesData: PicType[];
+}) {
+    const [viewer, setViewer] = useState<PicType[] | null>();
+    const [index, setIndex] = useState<number>(69);
+
+    // Disables scroll when viewer is open
+    useEffect(() => {
+        viewer
+            ? (document.body.style.overflow = 'hidden')
+            : (document.body.style.overflow = 'unset');
+        return;
+    }, [viewer]);
+
     return (
         <Layout>
             <Head>
                 <title>Photography - Damián Ponce</title>
+                <meta
+                    name='viewport'
+                    content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
+                />
             </Head>
-
+            {viewer ? (
+                <Viewer
+                    onClick={() => setViewer(null)}
+                    pic={viewer}
+                    index={index}
+                />
+            ) : null}
             <div className='section'>
                 <div className='section-title'>
                     <div className='big-title'>fo•to•gra•fí•a</div>
@@ -75,15 +101,18 @@ export default function Photography({ allPicturesData }) {
                 className='masonry-grid'
                 columnClassName='masonry-grid_column'
             >
-                {allPicturesData.map((pic) => (
-                    <div key={pic.index} className={styles.card}>
+                {allPicturesData.map((value: PicType, index: number) => (
+                    <div key={value.index} className={styles.card}>
                         <Image
+                            onClick={() => (
+                                setViewer(allPicturesData), setIndex(index)
+                            )}
                             className={styles.image + ' no-touch'}
                             loader={customLoader}
-                            src={pic.fullPath}
-                            alt={pic.id}
+                            src={value.fullPath}
+                            alt={value.id}
                             width={650}
-                            height={650 / pic.ratio}
+                            height={650 / value.ratio}
                             quality={100}
                         />
                     </div>
