@@ -50,16 +50,18 @@ export default function Viewer({
         setState({ x, y, scale });
     }
 
+    // @ts-ignore
     let picArray: any[] = pic[0] ? pic : getPicArray();
 
     function getPicArray() {
         let tempArray: object[] = [];
+        // @ts-ignore
         Object.entries(designs[title][group]['pics']).map((id) => {
+            // @ts-ignore
             tempArray.push(pic[id[1]]);
         });
         return tempArray;
     }
-
     useEffect(() => {
         console.log(blur);
         return;
