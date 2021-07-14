@@ -37,18 +37,28 @@
 .left {
     position: absolute;
     left: 0;
-    z-index: 90002;
 }
 .right {
     position: absolute;
     right: 0;
-    z-index: 90002;
 }
 
 .button {
-    height: 100vh;
+    z-index: 90002;
+    height: 64px;
     min-width: 48px;
-    background-color: #f009;
+    //  background-color: #f009;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button_mobile {
+    height: 100vh !important;
+}
+
+.svg {
+    filter: drop-shadow(0px 0px 3px rgb(0 0 0 / 0.3));
 }
 
 .closeButton {
@@ -58,6 +68,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #00fa;
+    //  background-color: #00fa;
     z-index: 90003;
 }

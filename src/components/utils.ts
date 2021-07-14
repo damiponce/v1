@@ -105,3 +105,8 @@ export const fullResCustomLoader: ImageLoader = (props: ImageLoaderProps) => {
     // return `https://example.com/${src}?w=${width}&q=${quality || 75}`
     return `https://damiponce.github.io/${props.src}?&q=${100}`;
 };
+
+export const blurCustomLoader = (src: string) => {
+    // return `https://example.com/${src}?w=${width}&q=${quality || 75}`
+    return `https://cdn.statically.io/img/damiponce.github.io/${src}?w=${10}&q=${75}`;
+};
