@@ -62,6 +62,16 @@ export default function Home() {
                     </NavLink>
                     <NavLink>
                         <a
+                            href='https://github.com/damiponce'
+                            target='_blank'
+                            rel='noreferrer'
+                            className={styles.socialIcon}
+                        >
+                            GitHub
+                        </a>
+                    </NavLink>
+                    <NavLink>
+                        <a
                             href='https://www.linkedin.com/in/damianponce/'
                             target='_blank'
                             rel='noreferrer'
@@ -78,16 +88,6 @@ export default function Home() {
                             className={styles.socialIcon}
                         >
                             CV
-                        </a>
-                    </NavLink>
-                    <NavLink>
-                        <a
-                            href='https://github.com/damiponce'
-                            target='_blank'
-                            rel='noreferrer'
-                            className={styles.socialIcon}
-                        >
-                            GitHub
                         </a>
                     </NavLink>
                     {/* <NavLink  style={{padding: 8}}>
