@@ -111,22 +111,32 @@ export default function Layout({ children }) {
                     </NavLink>
                     <NavLink>
                         <a
-                            href='https://github.com/damiponce'
+                            href='https://www.linkedin.com/in/damianponce/'
                             target='_blank'
                             rel='noreferrer'
-                            className={indexStyles.socialIcon}
+                            className={styles.socialIcon}
                         >
-                            GitHub
+                            LinkedIn
                         </a>
                     </NavLink>
                     <NavLink>
                         <a
-                            href='https://www.linkedin.com/in/damianponce/'
+                            href='https://github.com/damiponce/cv/raw/main/cv.pdf'
                             target='_blank'
                             rel='noreferrer'
-                            className={indexStyles.socialIcon}
+                            className={styles.socialIcon}
                         >
-                            LinkedIn
+                            CV
+                        </a>
+                    </NavLink>
+                    <NavLink>
+                        <a
+                            href='https://github.com/damiponce'
+                            target='_blank'
+                            rel='noreferrer'
+                            className={styles.socialIcon}
+                        >
+                            GitHub
                         </a>
                     </NavLink>
                     {/* <NavLink  style={{padding: 8}}>
