@@ -2,7 +2,6 @@ import { GetStaticProps } from 'next';
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
 import Layout from '../components/layout';
 import Viewer from '../components/viewer';
 import { customLoader, getAllPhotos, PicType } from '../components/utils';
@@ -35,7 +34,6 @@ function shuffle(array: PicType[]) {
       array[currentIndex] = array[randomIndex];
       array[randomIndex] = temporaryValue;
    }
-   console.log(array);
    return array;
 }
 
@@ -44,14 +42,6 @@ export default function Photography({
 }: {
    allPicturesData: PicType[];
 }) {
-   console.log('====================================');
-   console.log(
-      allPicturesData.map((pic) => {
-         return pic.dateTaken;
-      })
-   );
-   console.log('====================================');
-
    const [viewer, setViewer] = useState<PicType[] | null>();
    const [index, setIndex] = useState<number>(69);
 
