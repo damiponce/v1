@@ -45,7 +45,7 @@
    margin-inline: auto;
    font-family: Libre Franklin;
    margin-block-start: 1em;
-   font-variation-settings: 'wght' 70;
+   font-variation-settings: 'wght' 325;
 }
 
 .social {
@@ -83,7 +83,7 @@
 .abilities_text {
    font-size: 1.2rem;
    font-family: Libre Franklin;
-   font-variation-settings: 'wght' 70;
+   font-variation-settings: 'wght' 325;
    /* color: #222; */
    max-width: 600px;
    line-height: 1.4em;
@@ -91,13 +91,13 @@
 }
 
 .abilities_text b {
-   font-variation-settings: 'wght' 85;
+   font-variation-settings: 'wght' 575;
    color: #000;
    background: linear-gradient(to bottom, transparent 80%, #f4e87c 20%);
 }
 
 .abilities_text a {
-   font-variation-settings: 'wght' 85;
+   font-variation-settings: 'wght' 575;
    color: #000;
    background: linear-gradient(to bottom, transparent 80%, #f1b8e1 20%);
 }
