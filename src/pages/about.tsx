@@ -1,10 +1,8 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import Layout from '../components/layout';
 import Image from 'next/image';
 import { customLoader } from '../components/utils';
 import styles from '../styles/about.module.css';
-import * as social from '../styles/index.module.css';
 
 export default function Work() {
    return (
@@ -12,8 +10,6 @@ export default function Work() {
          <Head>
             <title>Sobre mí - Damián Ponce</title>
          </Head>
-
-         {/* <h1 className='big-title'>En desarrollo.</h1> */}
 
          <div className={styles.section + ' section'}>
             <div

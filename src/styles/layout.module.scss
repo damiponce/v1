@@ -33,7 +33,7 @@ $border: #0007;
    -ms-user-select: none;
    user-select: none;
    z-index: 10;
-   transition: 0.1s;
+   transition: 0.15s cubic-bezier(0.6, 0, 0.4, 1);
 }
 
 @supports not (backdrop-filter: blur(8px)) {
@@ -78,6 +78,7 @@ $border: #0007;
    cursor: pointer;
    -webkit-tap-highlight-color: transparent;
    pointer-events: auto;
+   padding: 8px;
 }
 
 .links {

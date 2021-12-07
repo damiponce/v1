@@ -95,9 +95,13 @@
    display: flex;
    flex-wrap: wrap;
    flex-direction: row;
-   gap: 16px;
    list-style: none;
    padding: 0;
+
+   gap: 24px;
+   @media (max-width: 750px) {
+      column-gap: 32px;
+   }
 }
 
 .socialIcon {
@@ -148,67 +152,3 @@
 // .socialIcon:last-child {
 //    padding: 8px 0px 8px 16px;
 // }
-
-$red: #f37272;
-$brown: #584e4a;
-$whitey: #f0f0f0;
-
-$duration: 0.2s;
-$distance: 8px;
-$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-a.pageLik {
-   // font-size: 20px;
-   // color: $brown;
-   position: relative;
-   // text-transform: uppercase;
-   text-decoration: none;
-   // padding-bottom: 8px;
-
-   &:before,
-   &:after {
-      content: '';
-      position: absolute;
-      bottom: 2px;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background-color: $red;
-   }
-   &:before {
-      opacity: 0;
-      transform: translateY(-$distance);
-      transition: transform 0s $easeOutBack, opacity 0s;
-   }
-   &:after {
-      opacity: 0;
-      transform: translateY($distance/2);
-      transition: transform $duration $easeOutBack, opacity $duration;
-   }
-   &:hover,
-   &:focus {
-      &:before,
-      &:after {
-         opacity: 1;
-         transform: translateY(0);
-      }
-      &:before {
-         transition: transform $duration $easeOutBack, opacity $duration;
-      }
-      &:after {
-         transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
-      }
-   }
-}
-
-a.pagLink {
-   border-bottom: 1px solid $red;
-   &:hover {
-      border-bottom: none;
-      padding-bottom: 2px;
-      // background-position:0 100%;
-      background-repeat: repeat;
-      // probably never do this. its weird.
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 10 18'%3E%3Cstyle type='text/css'%3E.squiggle%7Banimation:shift .5s linear infinite;%7D@keyframes shift %7Bfrom %7Btransform:translateX(-10px);%7Dto %7Btransform:translateX(0);%7D%7D%3C/style%3E%3Cpath fill='none' stroke='blue' stroke-width='1' class='squiggle' d='M0,17.5 c 2.5,0,2.5,-1.5,5,-1.5 s 2.5,1.5,5,1.5 c 2.5,0,2.5,-1.5,5,-1.5 s 2.5,1.5,5,1.5' /%3E%3C/svg%3E");
-   }
-}

@@ -2,14 +2,12 @@ import { GetStaticProps } from 'next';
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
 import Layout from '../components/layout';
 import Viewer from '../components/viewer';
 import {
    customLoader,
    getAllDesigns,
    GroupPicsType,
-   PicType,
 } from '../components/utils';
 import Masonry from 'react-masonry-css';
 import designs from '../public/designs.json';
@@ -103,7 +101,11 @@ export default function Design({
 
          {Object.entries(designs).map((key) => {
             return (
-               <div className={styles.topic} id="topic" key={key[0]}>
+               <div
+                  className={styles.topic}
+                  id="topic"
+                  key={parseTopic(key[0])[1]}
+               >
                   <div
                      className={styles.hashPadding}
                      id={parseTopic(key[0])[1]}
@@ -201,26 +203,4 @@ export default function Design({
          })}
       </Layout>
    );
-}
-
-{
-   /* <Masonry
-    breakpointCols={{ default: 3, 1000: 2, 650: 1 }}
-    className='masonry-grid'
-    columnClassName='masonry-grid_column'
->
-    {allPicturesData.map((pic) => (
-        <div key={pic.index} className={styles.card}>
-            <Image
-                className={styles.image + ' no-touch'}
-                loader={customLoader}
-                src={pic.fullPath}
-                alt={pic.id}
-                width={650}
-                height={650 / pic.ratio}
-                quality={100}
-            ></Image>
-        </div>
-    ))}
-</Masonry> */
 }

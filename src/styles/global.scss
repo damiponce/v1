@@ -1,14 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900');
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800;900');
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700');
-
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@100;200;300;400;500;600;700;800;900');
-
-@font-face {
-   font-family: 'League Spartan Variable';
-   src: url('/fonts/LeagueSpartan-VF.woff2') format('woff2-variations');
-   font-variation-settings: 'wght' 300 400 600 700 900;
-}
+// @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@100;200;300;400;500;600;700;800;900');
 
 @font-face {
    font-family: 'Fraunces';
@@ -33,20 +23,6 @@
    src: url('/fonts/LibreFranklinGX-Italics-v4015.ttf')
       format('woff2-variations');
 }
-
-@font-face {
-   font-family: 'Bagnard';
-   src: url('/fonts/Bagnard.otf');
-   // font-variation-settings: 'wght' 300 400 600 700 900;
-}
-
-// @font-face {
-//     font-family: 'Edwin';
-//     src: url('/fonts/Edwin/Edwin-Bold.otf');
-//     font-style: bold;
-//     font-weight: 900;
-//     font-display: swap;
-// }
 
 html,
 body {
@@ -161,15 +137,6 @@ a {
    user-select: none;
    -webkit-user-select: none;
    -ms-user-select: none;
-}
-
-code {
-   background: #fafafa;
-   border-radius: 5px;
-   padding: 0.75rem;
-   font-size: 1.1rem;
-   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-      Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
 .section {
@@ -307,67 +274,6 @@ code {
       margin-left: 0;
    }
 }
-
-$aul: rgb(235, 201, 243);
-
-$duration: 0.2s;
-$distance: 7px;
-$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-// a[meta*='iul'] {
-//     position: relative;
-//     text-decoration: none;
-//     padding-bottom: 0.2em;
-//     z-index: 1;
-//     width: fit-content;
-// }
-
-// a[meta*='aul'] {
-//     position: relative;
-//     text-decoration: none;
-//     padding-bottom: 0.2em;
-//     z-index: 1;
-//     width: fit-content;
-//     pointer-events: initial;
-
-//     &:before,
-//     &:after {
-//         content: '';
-//         position: absolute;
-//         bottom: 0.25em;
-//         left: 0;
-//         right: 0;
-//         height: 0.5em;
-//         border-radius: 0.14em;
-//         background-color: $aul;
-//         z-index: -1;
-//     }
-//     &:before {
-//         opacity: 0;
-//         transform: translateY(-$distance);
-//         transition: transform 0s $easeOutBack, opacity 0s;
-//     }
-//     &:after {
-//         opacity: 0;
-//         transform: translateY($distance/2);
-//         transition: transform $duration $easeOutBack, opacity $duration;
-//     }
-//     &:hover,
-//     &:focus {
-//         &:before,
-//         &:after {
-//             opacity: 1;
-//             transform: translateY(0);
-//         }
-//         &:before {
-//             transition: transform $duration $easeOutBack, opacity $duration;
-//         }
-//         &:after {
-//             transition: transform 0s $duration $easeOutBack,
-//                 opacity 0s $duration;
-//         }
-//     }
-// }
 
 .active {
    display: none;

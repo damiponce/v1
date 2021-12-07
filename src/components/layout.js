@@ -1,12 +1,8 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import styles from '../styles/layout.module.scss';
 import indexStyles from '../styles/index.module.scss';
-import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import { useEffect } from 'react';
-
-import NavLink from './NavLink';
 
 export default function Layout({ children }) {
    useEffect(() => {
@@ -15,17 +11,14 @@ export default function Layout({ children }) {
       let navBarToggle = document.getElementById('js-burger');
       navBarToggle.addEventListener('click', function () {
          mainNav.classList.contains(styles.active)
-            ? setTimeout(() => mainNav.classList.toggle(styles.active), 100)
+            ? setTimeout(() => mainNav.classList.toggle(styles.active), 150) // change (in ms) with .header <layout.module.scss> transition
             : mainNav.classList.toggle(styles.active);
 
          header.classList.toggle(styles.height);
       });
 
-      let cursor = document.getElementById('js-cursor');
-
       window.onscroll = function () {
          stickNavBar();
-         cursor.style.marginTop = window.pageYOffset;
       };
 
       // Get the offset position of the navbar
@@ -48,20 +41,16 @@ export default function Layout({ children }) {
          </Head>
          <header className={styles.header} id="js-header">
             <div className={styles.logo}>
-               <NavLink style={{ padding: 8 }} id="js-cursor">
-                  <Link href="/" passHref>
-                     <img src="/dp-logo.svg" width="30" height="20" alt="" />
-                  </Link>
-               </NavLink>
+               <Link href="/" passHref>
+                  <img src="/dp-logo.svg" width="30" height="20" alt="" />
+               </Link>
             </div>
             <div className={styles.spacer} />
-            <NavLink style={{ padding: 8 }}>
-               <div className={styles.burger} id="js-burger">
-                  <img src="/burger-menu.svg" width="30" height="20" alt="" />
-               </div>
-            </NavLink>
+            <div className={styles.burger} id="js-burger">
+               <img src="/burger-menu.svg" width="30" height="20" alt="" />
+            </div>
             <div className={styles.links} id="js-menu">
-               {/* IMPORTANTE: usar mismas CAPS en data-text y en el contenido*/}
+               {/* IMPORTANTE: usar mismas CAPS en data-text y en el contenido (bold hover shift prevention)*/}
                <Link href="/photography" passHref>
                   <a className={styles.link} data-text="fotografía">
                      fotografía
@@ -93,47 +82,43 @@ export default function Layout({ children }) {
                © Damián Ponce 2021 {/* COPYRIGHT */}
             </div>
             <div className={indexStyles.socialLinks}>
-               <NavLink>
-                  <a
-                     href="mailto:dami.ponce8@gmail.com"
-                     target="_blank"
-                     rel="noreferrer"
-                     className={indexStyles.socialIcon}
-                  >
-                     Email
-                  </a>
-               </NavLink>
-               <NavLink>
-                  <a
-                     href="https://github.com/damiponce"
-                     target="_blank"
-                     rel="noreferrer"
-                     className={indexStyles.socialIcon}
-                  >
-                     GitHub
-                  </a>
-               </NavLink>
-               <NavLink>
-                  <a
-                     href="https://www.linkedin.com/in/damianponce/"
-                     target="_blank"
-                     rel="noreferrer"
-                     className={indexStyles.socialIcon}
-                  >
-                     LinkedIn
-                  </a>
-               </NavLink>
-               <NavLink>
-                  <a
-                     href="https://github.com/damiponce/cv/raw/main/cv.pdf"
-                     target="_blank"
-                     rel="noreferrer"
-                     className={indexStyles.socialIcon}
-                  >
-                     CV
-                  </a>
-               </NavLink>
-               {/* <NavLink  style={{padding: 8}}>
+               <a
+                  href="mailto:dami.ponce8@gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={indexStyles.socialIcon}
+               >
+                  Email
+               </a>
+
+               <a
+                  href="https://github.com/damiponce"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={indexStyles.socialIcon}
+               >
+                  GitHub
+               </a>
+
+               <a
+                  href="https://www.linkedin.com/in/damianponce/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={indexStyles.socialIcon}
+               >
+                  LinkedIn
+               </a>
+
+               <a
+                  href="https://github.com/damiponce/cv/raw/main/cv.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={indexStyles.socialIcon}
+               >
+                  CV
+               </a>
+
+               {/*
                     <a
                         href='https://www.behance.net/damianarielponce'
                         target='_blank'
@@ -141,27 +126,25 @@ export default function Layout({ children }) {
                         className={indexStyles.socialIcon}
                     >
                         B
-                    </a></NavLink> */}
-               <NavLink>
-                  <a
-                     href="https://www.instagram.com/damiponce28/"
-                     target="_blank"
-                     rel="noreferrer"
-                     className={indexStyles.socialIcon}
-                  >
-                     Instagram
-                  </a>
-               </NavLink>
-               <NavLink>
-                  <a
-                     href="https://twitter.com/damiponce28"
-                     target="_blank"
-                     rel="noreferrer"
-                     className={indexStyles.socialIcon}
-                  >
-                     Twitter
-                  </a>
-               </NavLink>
+                    </a> */}
+
+               <a
+                  href="https://www.instagram.com/damiponce28/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={indexStyles.socialIcon}
+               >
+                  Instagram
+               </a>
+
+               <a
+                  href="https://twitter.com/damiponce28"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={indexStyles.socialIcon}
+               >
+                  Twitter
+               </a>
             </div>
          </div>
       </div>

@@ -1,7 +1,5 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import Image from 'next/image';
-import NavLink from '../components/NavLink.js';
 
 import styles from '../styles/index.module.scss';
 
@@ -91,7 +89,7 @@ export default function Home() {
                   </a>
                </li>
 
-               {/* <NavLink  style={{padding: 8}}>
+               {/* 
                     <a
                         href='https://www.behance.net/damianarielponce'
                         target='_blank'
@@ -123,11 +121,6 @@ export default function Home() {
                   </a>
                </li>
             </ul>
-            {/* <Image
-                    src={'/../public/100_9671.JPG'}
-                    layout='fill'
-                    objectFit='cover'
-                ></Image> */}
          </main>
       </div>
    );
