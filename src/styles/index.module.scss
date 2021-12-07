@@ -51,7 +51,7 @@
    // background-position:0 100%;
    background-repeat: repeat;
    // probably never do this. its weird.
-   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 10 18'%3E%3Cstyle type='text/css'%3E.squiggle%7Banimation:shift .75s linear infinite;%7D@keyframes shift %7Bfrom %7Btransform:translateX(0px);%7Dto %7Btransform:translateX(-10px);%7D%7D%3C/style%3E%3Cpath fill='none' stroke='black' stroke-width='0.3' class='squiggle' d='M0,17.5 c 2.5,0,2.5,-1.5,5,-1.5 s 2.5,1.5,5,1.5 c 2.5,0,2.5,-1.5,5,-1.5 s 2.5,1.5,5,1.5' /%3E%3C/svg%3E");
+   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 10 18'%3E%3Cstyle type='text/css'%3E.squiggle%7Banimation:shift .75s linear infinite;%7D@keyframes shift %7Bfrom %7Btransform:translateX(0px);%7Dto %7Btransform:translateX(-10px);%7D%7D%3C/style%3E%3Cpath fill='none' stroke='black' stroke-width='0.3' class='squiggle' d='m 0 17.5 c 0 0 -1.8137 0 0 0 s 3.1862 -2.25 5 -2.25 c 0.9069 0 1.7075 0.5625 2.5 1.125 m 0 0 c 0.7925 0.5625 1.5931 1.125 2.5 1.125 c 1.8138 0 3.1862 -2.25 5 -2.25 s 3.1863 2.25 5 2.25' /%3E%3C/svg%3E");
 }
 
 .pageLinksGroup {
