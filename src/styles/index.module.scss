@@ -62,10 +62,10 @@
 
 @keyframes bolden {
    from {
-      font-variation-settings: 'wght' 65;
+      font-variation-settings: 'wght' 325;
    }
    to {
-      font-variation-settings: 'wght' 170;
+      font-variation-settings: 'wght' 750;
    }
 }
 
@@ -77,17 +77,17 @@
    letter-spacing: 1.1px;
    /* height: 2rem; */
    width: fit-content;
-   font-variation-settings: 'wght' 65;
-   font-weight: 600;
+   font-variation-settings: 'wght' 325;
+   // font-weight: 600;
    font-feature-settings: 'ss02';
    // padding: 8px 0;
-   transition: 0.1s cubic-bezier(0.6, 0, 0.4, 1);
+   transition: 0.06s cubic-bezier(0.6, 0, 0.4, 1);
    /* text-transform: uppercase; */
 }
 
 .pageLink:hover {
-   letter-spacing: 2px;
-   font-variation-settings: 'wght' 150;
+   // letter-spacing: 2px;
+   font-variation-settings: 'wght' 725;
 }
 
 .socialLinks {
@@ -108,7 +108,7 @@
    justify-self: center;
    font-size: 16px;
    text-align: center;
-   font-variation-settings: 'wght' 85;
+   font-variation-settings: 'wght' 325;
    color: #999;
    // display: inline-block;
    /* font-family: 'svg logos'; */
@@ -139,7 +139,7 @@
    overflow: hidden;
    user-select: none;
    pointer-events: none;
-   font-variation-settings: 'wght' 150;
+   font-variation-settings: 'wght' 650;
 
    @media speech {
       display: none;
