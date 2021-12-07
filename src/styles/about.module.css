@@ -1,103 +1,145 @@
 .picture {
-    border-radius: 50%;
-    /* padding: 5px; */
-    /* box-shadow: 0 5px 10px #555; */
-    max-height: 325px;
-    max-width: 325px;
-    width: 100%;
-    height: 100%;
-    font-size: 0;
-    overflow: hidden;
+   border-radius: 50%;
+   /* padding: 5px; */
+   /* box-shadow: 0 5px 10px #555; */
+   max-height: 325px;
+   max-width: 325px;
+   width: 100%;
+   height: 100%;
+   font-size: 0;
+   overflow: hidden;
+   -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
 }
 
 .section {
-    justify-content: space-around !important;
+   justify-content: space-around !important;
 }
 
 .intro {
-    margin: 0 0 30px 0 !important;
-    height: fit-content;
-    align-self: center;
+   margin: 0 0 30px 0 !important;
+   height: fit-content;
+   align-self: center;
 }
 
 .name {
-    font-weight: 800;
-    font-size: 2.6rem;
-    text-align: center;
-    /* color: #222; */
-    line-height: normal;
-    margin-bottom: 0.2em;
-    /* white-space: pre; */
+   font-variation-settings: 'opsz' 52, 'SOFT' 0, 'wght' 550, 'WONK' 0;
+
+   font-size: 2.6rem;
+   text-align: center;
+   /* color: #222; */
+   line-height: normal;
+   margin-bottom: 0.2em;
+   /* white-space: pre; */
 }
 
 .subname {
-    font-weight: 300;
-    font-size: 1.3rem;
-    text-align: center;
-    /* color: #222; */
-    max-width: 72%;
-    justify-content: center;
-    margin-inline: auto;
+   font-size: 1.3rem;
+   text-align: center;
+   max-width: 72%;
+   justify-content: center;
+   margin-inline: auto;
+   font-family: Libre Franklin;
+   margin-block-start: 1em;
+   font-variation-settings: 'wght' 70;
 }
 
 .social {
-    margin-inline: auto;
+   margin-inline: auto;
 }
 
 @media (max-width: 750px) {
-    /* .name,
+   /* .name,
     .subname {
         text-align: left;
     } */
-    .picture {
-        max-height: 275px;
-        max-width: 275px;
-    }
+   .picture {
+      max-height: 275px;
+      max-width: 275px;
+   }
 
-    .subname,
-    .all_groups {
-        max-width: 100%;
-        margin-inline: 1rem;
-    }
+   .subname,
+   .all_groups {
+      max-width: 100%;
+      margin-inline: 1rem;
+   }
 }
 
 .abilities_title {
-    display: inline-block;
-    font-weight: 700;
-    font-size: 2.2rem;
-    /* color: #222; */
-    line-height: normal;
-    margin-bottom: 0.2em;
+   display: inline-block;
+   font-family: Fraunces;
+   font-variation-settings: 'opsz' 52, 'SOFT' 0, 'wght' 550, 'WONK' 0;
+
+   font-size: 2.2rem;
+   /* color: #222; */
+   line-height: normal;
+   margin-bottom: 0.2em;
 }
 
 .abilities_text {
-    font-weight: 300;
-    font-size: 1.2rem;
-    /* color: #222; */
-    max-width: 600px;
-    line-height: 1.4em;
-    /* white-space: break-spaces; */
+   font-size: 1.2rem;
+   font-family: Libre Franklin;
+   font-variation-settings: 'wght' 70;
+   /* color: #222; */
+   max-width: 600px;
+   line-height: 1.4em;
+   /* white-space: break-spaces; */
+}
+
+.abilities_text b {
+   font-variation-settings: 'wght' 85;
+   color: #000;
+   background: linear-gradient(to bottom, transparent 80%, #f4e87c 20%);
+}
+
+.abilities_text a {
+   font-variation-settings: 'wght' 85;
+   color: #000;
+   background: linear-gradient(to bottom, transparent 80%, #f1b8e1 20%);
+}
+
+.abilities_title,
+.name b {
+   font-weight: normal;
+   background: linear-gradient(to bottom, transparent 50%, #f4e87c 50%);
+}
+
+.abilities_text p {
+   text-indent: 1.5em;
+   margin-block: 0.7em;
+}
+
+.abilities_text p:first-child {
+   margin-block-start: 0.5em;
+}
+
+.abilities_text p:last-child {
+   margin-block-end: 1.5em;
 }
 
 .group {
-    max-width: fit-content;
-    margin-top: 3rem;
+   max-width: fit-content;
+   margin-top: 3rem;
 }
 
 .group:nth-child(odd) {
-    margin-right: auto;
-    text-align: left;
+   margin-right: auto;
+   text-align: left;
 }
 
 .group:nth-child(even) {
-    margin-left: auto;
-    text-align: right;
+   margin-left: auto;
+   text-align: right;
 }
 
 .group:first-of-type {
-    margin-top: 0;
+   margin-top: 0;
 }
 
 .all_groups {
-    margin-top: 40px;
+   margin-top: 40px;
 }
