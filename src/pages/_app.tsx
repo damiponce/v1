@@ -1,5 +1,6 @@
 import React from 'react';
 import App from 'next/app';
+import Script from 'next/script'
 import Providers from '../components/Providers.js';
 import '../styles/global.scss';
 
@@ -16,6 +17,21 @@ export default class MyApp extends App {
                   height: 100%;
                }
             `}</style>
+
+            <Script
+               src="https://www.googletagmanager.com/gtag/js?id=G-YV5ZCWEK9T"
+               strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+               {`
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){window.dataLayer.push(arguments);}
+                  gtag('js', new Date());
+
+                  gtag('config', 'GA_MEASUREMENT_ID');
+               `}
+            </Script>
+
             <Component {...pageProps} />
          </Providers>
       );
