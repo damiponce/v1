@@ -1,6 +1,4 @@
 import React from 'react';
-import App from 'next/app';
-import Script from 'next/script'
 import Script from 'next/script';
 import Providers from '../components/Providers.js';
 import { useEffect } from 'react';
@@ -8,19 +6,6 @@ import { useRouter } from 'next/router';
 import { GTM_ID, pageview } from '../components/gtm';
 import '../styles/global.scss';
 
-export default class MyApp extends App {
-   render() {
-      const { Component, pageProps } = this.props;
-      return (
-         <Providers>
-            <style global jsx>{`
-               html,
-               body,
-               body > div:first-child,
-               div#__next {
-                  height: 100%;
-               }
-            `}</style>
 function App({ Component, pageProps }: { Component: any; pageProps: any }) {
    const router = useRouter();
    useEffect(() => {
@@ -30,7 +15,6 @@ function App({ Component, pageProps }: { Component: any; pageProps: any }) {
       };
    }, [router.events]);
 
-            <Script
    return (
       <Providers>
          <style global jsx>{`
@@ -42,9 +26,7 @@ function App({ Component, pageProps }: { Component: any; pageProps: any }) {
             }
          `}</style>
 
-          gtag('config', 'G-YV5ZCWEK9T');
-        `}
-            </Script>
+         {/* Google Tag Manager - Global base code */}
          <Script
             id="gtm-script"
             strategy="afterInteractive"
