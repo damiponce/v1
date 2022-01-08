@@ -24,12 +24,12 @@ export default class MyApp extends App {
             />
             <Script id="google-analytics" strategy="afterInteractive">
                {`
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){window.dataLayer.push(arguments);}
-                  gtag('js', new Date());
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
 
-                  gtag('config', 'G-YV5ZCWEK9T');
-               `}
+          gtag('config', 'G-YV5ZCWEK9T');
+        `}
             </Script>
 
             <Component {...pageProps} />
