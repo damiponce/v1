@@ -21,6 +21,7 @@ module.exports = {
     assetPrefix: isProd
         ? 'https://cdn.statically.io/gh/damiponce/v1/gh-pages/'
         : '',
+    basePath: '/v1',
     // Set custom directory build.
     // distDir: 'out',
 };
